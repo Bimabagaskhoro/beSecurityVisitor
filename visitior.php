@@ -14,6 +14,7 @@ function insertVisitor()
         'createAt' => '',
         'updateAt' => '',
         'tujuan' => '',
+        'jadwal_satpam' => '',
         'status_visitor' => '');
     $check_match = count(array_intersect_key($_POST, $check));
     if ($check_match == count($check)) {
@@ -25,6 +26,7 @@ function insertVisitor()
              createAt = '$_POST[createAt]',
              updateAt = '$_POST[updateAt]',
              tujuan = '$_POST[tujuan]',
+             jadwal_satpam = '$_POST[jadwal_satpam]',
              status_visitor = '$_POST[status_visitor]'");
 
         if ($result) {
@@ -60,6 +62,7 @@ function updateVisitor()
         'createAt' => '',
         'updateAt' => '',
         'tujuan' => '',
+        'jadwal_satpam' => '',
         'status_visitor' => '');
 
     $check_match = count(array_intersect_key($_POST, $check));
@@ -70,6 +73,7 @@ function updateVisitor()
          createAt = '$_POST[createAt]',
          updateAt = '$_POST[updateAt]',
          tujuan = '$_POST[tujuan]',
+         jadwal_satpam = '$_POST[jadwal_satpam]',
          status_visitor = '$_POST[status_visitor]' WHERE id = $id");
 
         if ($result) {
